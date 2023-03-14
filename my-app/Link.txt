@@ -1,0 +1,72 @@
+
+096 -
+https://github.com/ihinstone/react-gotapp
+
+096 JSONplaceholder
+https://jsonplaceholder.typicode.com/
+
+096 Fetch-API
+https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch
+
+096 GOT-API
+https://anapioficeandfire.com/
+
+096 async-await
+https://habr.com/company/ruvds/blog/326074/
+
+096 public-free-API
+https://github.com/toddmotto/public-apis
+
+097 Spinners
+https://loading.io/
+
+097 -
+https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+097 http-status-codes
+https://goo.gl/NaMlvV
+
+098 -
+https://docs.google.com/document/d/11Xa_WYPu8qBiKk6En8KIKcHC09TZUIPv8LgC8Ogxv8Q/edit?usp=sharing
+
+099 http-server
+https://www.npmjs.com/package/http-server
+
+099 hooks
+https://reactjs.org/docs/react-component.html#lifecycle-methods
+
+099 RegEx
+https://regex101.com/
+
+099 -
+https://docs.google.com/document/d/1xU_ZYHiCyoHpNQqFNbtm4nBhFIWN23rNHvgNXciIXYA/edit?usp=sharing
+
+100 React-patterns
+https://habr.com/post/309422/
+
+100 React.children
+https://reactjs.org/docs/react-api.html#reactchildren
+
+100 -
+https://docs.google.com/document/d/1XFnUT1_nmbOXoVi0sLLYg_U0Ed1E38GvBkDx_AF7g4o/edit?usp=sharing
+
+101 React-Router
+https://reacttraining.com/react-router/web/guides/quick-start
+
+101 RR-npm
+https://www.npmjs.com/package/react-router-dom
+
+101 -
+https://docs.google.com/document/d/1P_-qh4jzl3Qlp3eInULAdcnCmKzqQjJC50vx7DHjxyI/edit?usp=sharing
+
+102 NPM-Prop-types
+https://www.npmjs.com/package/prop-types
+
+102 -
+https://ru.reactjs.org/docs/typechecking-with-proptypes.html
+
+103 -HOC
+https://medium.com/@karafizi/%D0%BF%D0%BE%D1%81%D1%82%D0%B8%D0%B3%D0%B0%D0%B5%D0%BC-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D1%8B-%D0%B2%D1%8B%D1%81%D1%88%D0%B5%D0%B3%D0%BE-%D0%BF%D0%BE%D1%80%D1%8F%D0%B4%D0%BA%D0%B0-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4-87ecfad848e5
+
+104 -
+https://learn-reactjs.ru/core/hooks/introduction
