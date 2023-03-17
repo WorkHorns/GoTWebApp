@@ -10,3 +10,10 @@
 .term {
     font-weight: bold;
 }
+.toggle-block {
+    margin-bottom: 45px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    background-color:brown;
+    color: azure;
+}

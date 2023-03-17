@@ -1,22 +1,20 @@
 //mod
 import React, {Component} from 'react';
 import gotService from '../services/gotService';
-import Spinner from '../spinner/spinner';
+import Spinner from '../spinner';
 import ErrorMessage from '../error';
 //css
 import './randomChar.css';
 
 export default class RandomChar extends Component {
-    constructor() {
-        super();
-        this.updataChar();
-    }
+    
     gotService = new gotService();
     state = {
       char: {},//Пустой обьект.
       loading: true,
-      error: false
+      error: false,
     }
+ 
     //Загрузка персонажа
     onCharLoaded = (char) => {
         this.setState({
@@ -32,12 +30,21 @@ export default class RandomChar extends Component {
         })
     }
     //Обновление рандомного персонажа
-    updataChar() {
-        // const id = Math.floor(Math.random()*140 + 25);
-        const id = 50; //Для теста ошибки.
+    updataChar = () => {
+        const id = Math.floor(Math.random() * 140 + 25);
+        // const id = 50; //Для теста ошибки.
         this.gotService.getCharacter(id)
             .then(this.onCharLoaded)
             .catch(this.onError)
+    }
+
+    componentDidMount() {
+        this.updataChar();
+        this.timerId = setInterval(this.updataChar, 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerId);
     }
 
     render() {
@@ -48,11 +55,16 @@ export default class RandomChar extends Component {
         const content = !(loading || error) ? <View char={char}/> : null; //Инверсивная проверка если не loading и не error, то мапим список
 
         return (
+            <>
             <div className="random-block rounded">
                 {errorMes}
                 {spinner}
                 {content}
             </div>
+            <div>
+                <button className="toggle-block">Hide character</button>
+            </div>
+            </>
         );
     }
 }

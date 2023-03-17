@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+
+
+//CSS
 import './itemList.css';
 export default class ItemList extends Component {
 
