@@ -20,18 +20,16 @@ export default class ItemList extends Component {
     }
 //Вместо 41. Придумать механизм идентификации
     renderItems(arr) {
-        return arr.map((item, i) => {
+        return arr.map((item) => {
             return (
                 <li 
-                key={i}
+                key={item.id}
                 className="list-group-item"
-                onClick={ () => this.props.onCharSelected(41 + i)}> 
+                onClick={ () => this.props.onCharSelected(item.id)}> 
                     {item.name}
                 </li>
             )
         }) 
-
-        
     }
 
     render() {

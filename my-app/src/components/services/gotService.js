@@ -13,7 +13,7 @@ export default class GotService {
     }
 
     async getAllCharacters() {
-        const allChars = await this.getResource(`/characters/`);
+        const allChars = await this.getResource(`/characters?page=5`);
         return allChars.map(this._transformCharacter);
     }
 
@@ -38,13 +38,27 @@ export default class GotService {
         return this.getResource(`/books/${id}`);
     }
 
-    _transformCharacter(char) {
+    _isSet(data) {
+        if(data){
+            return data;
+        } else {
+            return 'Не известно'
+        }
+    }
+
+    _extractId = (item) => {
+        const idRegExp = /\/([0-9]*)$/;
+        return item.url.match(idRegExp)[1];
+    }
+
+    _transformCharacter = (char) => {
         return {
-            name: char.name,
-            gender: char.gender,
-            born: char.born,
-            died: char.died,
-            culture: char.culture
+            id: this._extractId(char),
+            name: this._isSet(char.name),
+            gender: this._isSet(char.gender),
+            born: this._isSet(char.born),
+            died: this._isSet(char.died),
+            culture: this._isSet(char.culture)
         }
     }
 
