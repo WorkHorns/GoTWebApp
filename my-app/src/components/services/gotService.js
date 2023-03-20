@@ -13,8 +13,8 @@ export default class GotService {
     }
 
     async getAllCharacters() {
-        const allChar = await this.getResource(`/characters`);
-        return allChar.map(this._transformCharacter);
+        const allChars = await this.getResource(`/characters/`);
+        return allChars.map(this._transformCharacter);
     }
 
     async getCharacter(id) {

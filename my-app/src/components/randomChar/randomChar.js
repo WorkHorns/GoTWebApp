@@ -40,7 +40,7 @@ export default class RandomChar extends Component {
 
     componentDidMount() {
         this.updataChar();
-        this.timerId = setInterval(this.updataChar, 1000);
+        this.timerId = setInterval(this.updataChar, 2000);
     }
 
     componentWillUnmount() {
@@ -60,9 +60,6 @@ export default class RandomChar extends Component {
                 {errorMes}
                 {spinner}
                 {content}
-            </div>
-            <div>
-                <button className="toggle-block">Hide character</button>
             </div>
             </>
         );
