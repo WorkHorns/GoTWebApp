@@ -7,7 +7,7 @@ import CharacterPage from '../characterPage';
 import CharDetails from '../charDetails';
 import ItemList from '../itemList';
 import gotService from '../services/gotService';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+// import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 export default class App extends Component {
     gotService = new gotService();
