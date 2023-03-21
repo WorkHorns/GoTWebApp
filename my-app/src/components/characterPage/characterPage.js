@@ -45,8 +45,6 @@ export default class CharacterPage extends Component {
                 <Field field='died' label='Died'/>
                 <Field field='culture' label='Culture'/>
             </CharDetails>
-
-          
         )
 
         return (
