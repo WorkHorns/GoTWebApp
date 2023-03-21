@@ -1,21 +1,20 @@
 import React, {Component} from 'react';
-import gotService from '../services/gotService';
 import Spinner from '../spinner';
 
 //CSS
 import './itemList.css';
 export default class ItemList extends Component {
 
-    gotService = new gotService();
-
     state = {
-        charList: null
+        itemList: null
     }
 
     componentDidMount() {
-        this.gotService.getAllCharacters()
-            .then((charList) => {
-            this.setState({charList})
+        const {getData} = this.props;
+
+        getData()
+            .then((itemList) => {
+            this.setState({itemList})
         })
     }
 //Вместо 41. Придумать механизм идентификации
@@ -23,24 +22,23 @@ export default class ItemList extends Component {
         return arr.map((item) => {
             return (
                 <li 
-                key={item.id}
-                className="list-group-item"
-                onClick={ () => this.props.onCharSelected(item.id)}> 
-                    {item.name}
+                    key={item.id}
+                    className="list-group-item"
+                    onClick={ () => this.props.onCharSelected(item.id)}> 
+                        {item.name}
                 </li>
             )
         }) 
     }
 
     render() {
+        const {itemList} = this.state;
 
-        const {charList} = this.state;
-
-        if(!charList) {
+        if(!itemList) {
             return <Spinner/>
         }
 
-        const items = this.renderItems(charList);
+        const items = this.renderItems(itemList);
 
         return (
             <ul className="item-list list-group">
