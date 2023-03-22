@@ -1,5 +1,5 @@
 import React from "react";
-import img from './got.jpeg'
+import img from './er.png'
 //css
 import './errorMessage.css';
 
