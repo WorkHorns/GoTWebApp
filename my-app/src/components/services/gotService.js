@@ -55,6 +55,7 @@ export default class GotService {
         return item.url.match(idRegExp)[1];
     }
 
+
     _transformCharacter = (char) => {
         return {
             id: this._extractId(char),
@@ -78,12 +79,13 @@ export default class GotService {
         }
     }
 
-    _transformBooks(book) {
+    _transformBooks = (book) => {
         return {
-            name: book.name,
-            numberOfPages: book.numberOfPages,
-            publisher: book.publisher,
-            released: book.released
+            id: this._extractId(book),
+            name: this._isSet(book.name),
+            numberOfPages: this._isSet(book.numberOfPages),
+            publisher: this._isSet(book.publisher),
+            released: this._isSet(book.released)
         }
     }
 }
