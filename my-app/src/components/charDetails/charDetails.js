@@ -45,11 +45,12 @@ export default class CharDetails extends Component {
     }
 
     render() {
+        const {char} = this.state; 
 
-        if(!this.state.char) {
+        if(!char) {
             return <span className='select-error'>Выберите персонажа</span>
         }
-        const {char} = this.state; 
+        
         const {name} = char
 
         return (
