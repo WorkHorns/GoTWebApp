@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ItemList from '../itemList';
-import BookDetails, {Field} from '../bookDetails';
+import ItemDetails, {Field} from '../itemDetails';
 import ErrorMessage from '../error';
 import gotService from '../services/gotService';
 import RowBlock from '../rowBlock';
@@ -39,10 +39,12 @@ export default class BookPage extends Component {
             )
 
         const bookDetails = (
-            <BookDetails bookId={this.state.selectedBook}>
+            <ItemDetails 
+            itemId={this.state.selectedBook}
+            getData={this.gotService.getBook}>
                 <Field field='numberOfPages' label='Number Of Pages'/>
                 <Field field='released' label='Released'/>
-            </BookDetails>
+            </ItemDetails>
         )
 
         return (

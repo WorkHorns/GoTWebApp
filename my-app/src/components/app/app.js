@@ -5,7 +5,7 @@ import RandomChar from '../randomChar';
 import ErrorMessage from '../error';
 import CharacterPage, {HousesPage, BookPage} from '../itemPages';
 import gotService from '../services/gotService';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+// import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 export default class App extends Component {
     gotService = new gotService();
@@ -34,8 +34,7 @@ export default class App extends Component {
             return <ErrorMessage/>
         }
         return(
-            <Router>
-                <div className='app'> 
+            <>
                     <Container>
                         <Header />
                     </Container>
@@ -49,15 +48,13 @@ export default class App extends Component {
                                 </button>
                             </Col>
                         </Row>
-                        <Route path='/characters' component={CharacterPage}/>
-                        <Route path='/houses' component={HousesPage}/>
-                        <Route path='/books' component={BookPage}/>
-                        {/* <CharacterPage/>
+                       
+                        <CharacterPage/>
                         <HousesPage/>
-                    <BookPage/> */}
+                        <BookPage/>
                     </Container>
-                </div>
-            </Router>
+            </>
+         
         )
     }
 }
