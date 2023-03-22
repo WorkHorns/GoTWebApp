@@ -17,7 +17,6 @@ export default class ItemList extends Component {
             this.setState({itemList})
         })
     }
-//Вместо 41. Придумать механизм идентификации
     renderItems(arr) {
         return arr.map((item) => {
             const {id} = item;
