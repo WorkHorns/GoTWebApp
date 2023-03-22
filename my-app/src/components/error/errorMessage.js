@@ -7,8 +7,8 @@ const ErrorMessage = () => {
     return (
         <>
             {/* <img src={process.env.PUBLIC_URL + '/img/got.jpeg'} alt='error'></img> Ссылка на статический обьект в проекте */ } 
+            <span className="text"><p>Где-то ошибка.</p></span>
             <img src={img} alt='error'></img>
-            <span>Что то не так.</span>
         </>
     )
 }
