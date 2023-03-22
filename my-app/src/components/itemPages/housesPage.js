@@ -41,8 +41,8 @@ export default class HousesPage extends Component {
         const houseDetails = (
             <HouseDetails houseId={this.state.selectedHouse}>
                 <Field field='region' label='Region'/>
-                <Field field='titles' label='Titles'/>
                 <Field field='words' label='Words'/>
+                <Field field='coatOfArms' label='Coat Of Arms'/>
             </HouseDetails>
         )
 
