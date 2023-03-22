@@ -4,10 +4,8 @@ import Header from '../header';
 import RandomChar from '../randomChar';
 import ErrorMessage from '../error';
 import CharacterPage, {HousesPage, BookPage} from '../itemPages';
-// import CharDetails from '../charDetails';
-// import ItemList from '../itemList';
 import gotService from '../services/gotService';
-// import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 export default class App extends Component {
     gotService = new gotService();
@@ -18,7 +16,6 @@ export default class App extends Component {
     };
 
     componentDidCatch() {
-        console.log('error');
         this.setState({error: true})
     }
 
@@ -37,25 +34,30 @@ export default class App extends Component {
             return <ErrorMessage/>
         }
         return(
-            <> 
-            <Container>
-                <Header />
-            </Container>
-            <Container>
-                <Row>
-                    <Col lg={{size: 5, offset: 0}}>
-                        {char}
-                        <button 
-                        className="toggle-block"
-                        onClick={this.toggleRandomChar}>Hide character
-                        </button>
-                    </Col>
-                </Row>
-                <CharacterPage/>
-                <HousesPage/>
-                <BookPage/>
-            </Container>
-        </>
+            <Router>
+                <div className='app'> 
+                    <Container>
+                        <Header />
+                    </Container>
+                    <Container>
+                        <Row>
+                            <Col lg={{size: 5, offset: 0}}>
+                                {char}
+                                <button 
+                                className="toggle-block"
+                                onClick={this.toggleRandomChar}>Hide character
+                                </button>
+                            </Col>
+                        </Row>
+                        <Route path='/characters' component={CharacterPage}/>
+                        <Route path='/houses' component={HousesPage}/>
+                        <Route path='/books' component={BookPage}/>
+                        {/* <CharacterPage/>
+                        <HousesPage/>
+                    <BookPage/> */}
+                    </Container>
+                </div>
+            </Router>
         )
     }
 }
