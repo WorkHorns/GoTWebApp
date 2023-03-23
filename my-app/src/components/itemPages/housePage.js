@@ -7,7 +7,7 @@ import RowBlock from '../rowBlock';
 
 
 
-export default class HousesPage extends Component {
+export default class HousePage extends Component {
     gotService = new gotService();
 
     state = {
