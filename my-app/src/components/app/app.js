@@ -7,6 +7,9 @@ import {CharacterPage, HousePage, BookPage} from '../itemPages';
 import gotService from '../services/gotService';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
+//css
+import './app.css'
+
 export default class App extends Component {
     gotService = new gotService();
 
@@ -35,7 +38,7 @@ export default class App extends Component {
         }
         return(
             <Router>
-                <>
+                <div>
                 <Container>
                     <Header />
                 </Container>
@@ -55,7 +58,7 @@ export default class App extends Component {
                         <Route path='/books' Component={BookPage}/>
                     </Routes>
                 </Container>
-                </>
+                </div>
             </Router>
         )
     }
