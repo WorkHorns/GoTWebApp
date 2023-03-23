@@ -12,7 +12,8 @@ export default class BookPage extends Component {
 
     state = {
         selectedBook: null,
-        error: false
+        error: false,
+        logo: 'Выбери книгу'
     }
 
     componentDidCatch() {

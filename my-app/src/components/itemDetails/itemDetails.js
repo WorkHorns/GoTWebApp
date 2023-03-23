@@ -19,7 +19,8 @@ export default class ItemDetails extends Component {
     gotService = new gotService();
 
     state = {
-        item: null
+        item: null,
+        logo: "Сhoose what you are interested"
     }
 
     componentDidMount() {
@@ -48,9 +49,10 @@ export default class ItemDetails extends Component {
 
     render() {
         const {item} = this.state; 
+        const {logo} = this.state;
 
         if(!item) {
-            return <span className='select-error'>Выберите</span>
+            return <span className='select-error'>{logo}</span>
         }
         
         const {name} = item
