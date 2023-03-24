@@ -15,7 +15,8 @@ export default class App extends Component {
 
     state = {
         showRandomChar: true,
-        error: false
+        error: false,
+        isToggleOn: true
     };
 
     componentDidCatch() {
@@ -25,7 +26,8 @@ export default class App extends Component {
     toggleRandomChar = () => {
     this.setState((state) => {
         return {
-                showRandomChar: !state.showRandomChar
+                showRandomChar: !state.showRandomChar,
+                isToggleOn: !state.isToggleOn
             }
         })
     }
@@ -48,7 +50,8 @@ export default class App extends Component {
                             {char}
                             <button 
                             className="toggle-block"
-                            onClick={this.toggleRandomChar}>Hide character
+                            onClick={this.toggleRandomChar}>
+                                {this.state.isToggleOn ? 'Hide character' : 'Show character'}
                             </button>
                         </Col>
                     </Row>

@@ -31,7 +31,7 @@ export default class RandomChar extends Component {
     }
     //Обновление рандомного персонажа
     updataChar = () => {
-        const id = Math.floor(Math.random() * 140 + 25);
+        const id = Math.floor(Math.random() * 2138);
         // const id = 50; //Для теста ошибки.
         this.gotService.getCharacter(id)
             .then(this.onCharLoaded)
@@ -40,7 +40,7 @@ export default class RandomChar extends Component {
 
     componentDidMount() {
         this.updataChar();
-        this.timerId = setInterval(this.updataChar, 2000);
+        this.timerId = setInterval(this.updataChar, 15000);
     }
 
     componentWillUnmount() {
