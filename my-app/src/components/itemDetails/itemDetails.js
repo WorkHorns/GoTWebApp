@@ -20,7 +20,7 @@ export default class ItemDetails extends Component {
 
     state = {
         item: null,
-        logo: "Сhoose what you are interested"
+        logo: "Сhoose what are you interested"
     }
 
     componentDidMount() {
